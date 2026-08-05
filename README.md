@@ -53,18 +53,26 @@
 **עמוד פרטי סרט:**
 ![פרטי סרט](./screenshots/moviePage.png)
 
+**הוספת סרט**
 **טופס הוספת סרט חדש:**
 ![הוספת סרט](./screenshots/addMovie.png)
+**הסרט נוסף לגלריה:**
 ![סרט נוסף לגלריה](./screenshots/addMovieResult.png)
 
 **מחיקת סרט:**
+**מחיקת הסרט**
 ![מחיקת סרט](./screenshots/deleteMovie.png)
+**וידוא מחיקת סרט**
 ![וידוא מחיקת סרט](./screenshots/deleteConfirm.png)
+**הסרט נמחק מהגלריה**
 ![סרט נמחק מהגלריה](./screenshots/movieDeleted.png)
 
 **חיפוש סרט:**
+**חיפוש סרט לפי שם**
 ![חיפוש לפי שם](./screenshots/searchByName.png)
+**חיפוש סרט לפי שנה**
 ![חיפוש לפי שנה](./screenshots/searchByYear.png)
+**חיפוש סרט לפי ז'אנר**
 ![חיפוש לי ז'אנר](./screenshots/searchByGenre.png)
 
 ## 🚀 התקנה והרצה מקומית
