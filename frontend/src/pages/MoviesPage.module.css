@@ -1,0 +1,91 @@
+.pageContainer {
+  background-color: #121212;
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 30px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #e50914; /* צבע אדום קולנועי */
+}
+
+.searchSection {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #888;
+}
+
+/* רשת הסרטים הגלרית */
+.movieGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* כרטיסיית סרט */
+.movieCard {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.movieCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(229, 9, 20, 0.2);
+}
+
+.poster {
+  width: 100%;
+  height: 330px;
+  object-fit: cover; /* מונע עיוות של התמונה */
+  display: block;
+}
+
+.cardInfo {
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 1.1rem;
+  margin: 0 0 10px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* מוסיף 3 נקודות אם השם ארוך מדי */
+}
+
+.year, .rating {
+  font-size: 0.9rem;
+  color: #aaaaaa;
+  margin: 5px 0;
+}
+
+.searchSection {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* מוודא שהם ממורכזים יחד לגובה */
+  gap: 15px; /* מוסיף רווח בין שורת החיפוש לכפתור */
+  margin-bottom: 40px;
+}

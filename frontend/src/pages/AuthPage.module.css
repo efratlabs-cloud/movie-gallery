@@ -1,0 +1,168 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #121212; /* רקע כהה תואם לשאר האתר */
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* אזור הטופס השמאלי */
+.formSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* מירכוז אנכי של הטופס */
+  flex: 1;
+  max-width: 500px;
+  padding: 40px 50px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.titleWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 5px;
+}
+
+.titleWrapper .titleIcon {
+  font-size: 40px;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #e50914; /* אדום קולנועי כמו ב-Navbar */
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #aaaaaa;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+/* עיצוב הטופס */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input {
+  padding: 14px 18px;
+  background-color: #2b2b2b;
+  border: 1px solid #444444;
+  color: #ffffff;
+  font-size: 1rem;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.input::placeholder {
+  color: #888888;
+}
+
+.input:focus {
+  border-color: #e50914;
+  background-color: #1f1f1f;
+  box-shadow: 0 0 0 2px rgba(229, 9, 20, 0.25);
+}
+
+/* כפתורי פעולה */
+.submit {
+  background-color: #e50914;
+  color: #ffffff;
+  border: none;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+}
+
+.submit:hover {
+  background-color: #f40612;
+  transform: translateY(-2px);
+}
+
+.submit:active {
+  transform: translateY(0);
+}
+
+/* כפתור "אין לך משתמש?" */
+.toggle {
+  padding: 10px;
+  border: none;
+  background: none;
+  color: #aaaaaa;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  margin-top: 10px;
+}
+
+.toggle:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* אזור התמונה הימני */
+.imageSide {
+  flex: 1.2;
+  position: relative;
+  display: none; /* מוסתר במסכים קטנים (מובייל) */
+}
+
+/* הצגת התמונה רק במסכים גדולים */
+@media (min-width: 900px) {
+  .imageSide {
+    display: block;
+  }
+}
+
+.imageSide .image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* כיסוי התמונה - מעבר הדרגתי מהשחור של הטופס לתמונה */
+.overlay {
+  inset: 0;
+  position: absolute;
+  background: linear-gradient(to right, #121212 0%, rgba(18, 18, 18, 0.2) 100%);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 80px;
+}
+
+.overlayTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); /* צל מוסיף קריאות לטקסט על גבי התמונה */
+}
+
+.overlayTitle h1 {
+  color: #ffffff;
+  font-size: 3.5rem;
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.overlayTitle .span {
+  font-size: 1.5rem;
+  color: #e50914; /* הדגשה באדום */
+  margin-top: 15px;
+  font-weight: 500;
+}

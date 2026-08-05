@@ -1,0 +1,135 @@
+.pageContainer {
+  background-color: #121212;
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.contentWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  background-color: #1a1a1a;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  max-width: 900px;
+  width: 100%;
+}
+.poster {
+  width: 300px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.title {
+  font-size: 2.8rem;
+  margin: 0 0 15px 0;
+  color: #ffffff;
+}
+.metaRow {
+  display: flex;
+  gap: 15px;
+  color: #aaaaaa;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+.metaRow span {
+  background-color: #333;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+.rating {
+  font-size: 1.5rem;
+  color: #ffd700;
+  margin: 0 0 20px 0;
+}
+.crew {
+  margin-bottom: 25px;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+.crew strong {
+  color: #e50914;
+}
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #cccccc;
+  margin-bottom: 30px;
+}
+.backBtn {
+  margin-top: auto;
+  align-self: flex-start;
+  background-color: #f40612;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+}
+.backBtn:hover {
+  background-color: gray;
+  transform: scale(1.05);
+}
+.deleteBtn {
+  /* bottom: 25px;
+  right: 25px; */
+  margin-top: auto;
+  align-self: flex-start;
+  background: none ;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+}
+.deleteBtn:hover {
+  background-color: #ff1a1a;
+  transform: scale(1.05);
+}
+.btnRow {
+  display: flex;
+  flex: 1;
+  align-items: baseline;
+  justify-content: space-between;
+  /* gap: 50px; */
+}
+.message {
+  font-size: 1.5rem;
+  color: #888;
+  white-space: pre-line; /* מאפשר שמירה על שורות חדשות */
+}
+/* התאמה למסכים קטנים (מובייל) */
+@media (max-width: 768px) {
+  .contentWrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  .metaRow {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .backBtn {
+    align-self: center;
+  }
+}

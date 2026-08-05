@@ -1,0 +1,4 @@
+npm init - new project
+npm init -y - without questions
+npm i express
+npm i nodemon

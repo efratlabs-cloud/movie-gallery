@@ -1,0 +1,19 @@
+.error {
+  background-color: rgba(229, 9, 20, 0.1); /* רקע אדום שקוף ועדין */
+
+  color: #ff6b6b; /* טקסט אדום בהיר שקריא מאוד על רקע שחור */
+  padding: 12px 20px;
+  margin: 20px 0;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error p {
+  margin: 0;
+}

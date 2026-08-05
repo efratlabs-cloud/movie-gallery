@@ -1,0 +1,12 @@
+.nav {
+  display: flex;
+  justify-content: flex-end; /* דוחף את הכפתור לצד ימין. אם תרצי בשמאל, שחקי ל- flex-start */
+  align-items: center;
+  padding: 15px 30px;
+  background-color: rgba(0, 0, 0, 0.7); /* רקע שחור חצי שקוף */
+  backdrop-filter: blur(8px); /* אפקט טשטוש מודרני למה שמאחוריו */
+  border-bottom: 1px solid #333333;
+  position: sticky; /* משאיר את התפריט למעלה כשגוללים */
+  top: 0;
+  z-index: 100; /* דואג שהתפריט תמיד יסתיר אלמנטים אחרים כשיש גלילה */
+}

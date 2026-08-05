@@ -1,0 +1,192 @@
+// MOVIES requests
+
+# @hostname = api.example.com
+# @port = 8080
+# @host = {{hostname}}:{{port}}
+# GET https://{{host}}/authors/{{name}} HTTP/1.1
+
+@host = http://localhost:5000
+
+GET {{host}}
+
+###
+
+GET {{host}}/api/movies
+
+###
+GET {{host}}/api/movies/6a26efe90b9f2c03572a93d8
+
+###
+
+POST {{host}}/api/movies
+Content-Type: application/json
+
+{
+  "title": "Up",
+  "year": 2009,
+  "director": "Pete Docter",
+  "rating": 8.3,
+  "leadActor": "Edward Asner",
+  "duration": 96,
+  "genre": ["Animation", "Adventure", "Comedy"],
+  "description": "An elderly widower fulfills his lifelong dream of adventure by tying thousands of balloons to his house and flying to South America."
+}
+
+###
+
+PUT {{host}}/api/movies/6a26efe90b9f2c03572a93cd
+Content-Type: application/json
+
+{
+    "year": 2022
+}
+
+// test id
+# PUT {{host}}/api/movies/999
+# Content-Type: application/json
+
+# {
+#     "title": "Nice Movie",
+#     "year": 2026,
+#     "director": "Elior Cohen",
+#     "rating": 10,
+#     "leadActor": "Elior Cohen",
+#     "duration": 100,
+#     "genre": ["Comedy", "Drama"],
+#     "description": "סרטים מגניבים על ידי אליאור כהן"
+# }
+
+###
+DELETE  {{host}}/api/movies/6a26efe90b9f2c03572a93cd
+
+
+// USERS requests
+
+### 
+GET {{host}}/api/users
+
+###
+GET {{host}}/api/users/1
+
+### 
+GET {{host}}/api/users/999
+
+### 
+GET {{host}}/api/users?search=cobb
+
+### 
+GET {{host}}/api/users?genre=Sci-Fi
+
+### 
+POST {{host}}/api/users
+Content-Type: application/json
+
+{
+  "username": "trinity",
+  "email": "trinity@matrix.io"
+}
+
+### 
+POST {{host}}/api/users
+Content-Type: application/json
+
+{
+  "username": "morpheus",
+  "email": "morpheus@zion.org",
+  "fullName": "Morpheus",
+  "favoriteGenres": ["Sci-Fi", "Action", "Philosophy"]
+}
+
+### 
+POST {{host}}/api/users
+Content-Type: application/json
+
+{
+  "username": "incomplete"
+}
+
+### -----------------------------------------------------------
+POST {{host}}/api/users
+Content-Type: application/json
+
+{
+  "username": "neo",
+  "email": "imposter@matrix.io"
+}
+
+### 
+GET {{host}}/api/users/1/watchlist
+
+### 
+GET {{host}}/api/users/5/watchlist
+
+###
+POST {{host}}/api/users/4/watchlist
+Content-Type: application/json
+
+{
+  "movieId": 2
+}
+
+### 
+POST {{host}}/api/users/1/watchlist
+Content-Type: application/json
+
+{
+  "movieId": 1
+}
+
+### 
+POST {{host}}/api/users/1/watchlist
+Content-Type: application/json
+
+{
+  "movieId": 999
+}
+
+### 
+DELETE {{host}}/api/users/1/watchlist/2
+
+### 
+POST {{host}}/api/users
+Content-Type: application/json
+
+{
+  "username": "newbie",
+  "email": "newbie@streamflix.com",
+  "favoriteGenres": ["Drama"]
+}
+
+### 
+GET {{host}}/api/users/6
+
+### 
+POST {{host}}/api/users/6/watchlist
+Content-Type: application/json
+
+{
+  "movieId": 1
+}
+
+### 
+POST {{host}}/api/users/6/watchlist
+Content-Type: application/json
+
+{
+  "movieId": 3
+}
+
+### 
+POST {{host}}/api/users/6/watchlist
+Content-Type: application/json
+
+{
+  "movieId": 5
+}
+
+### 
+GET {{host}}/api/users/6/watchlist
+
+###
+
+GET {{host}}/api/users/6a26efe90b9f2c03572a93c5

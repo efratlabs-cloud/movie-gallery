@@ -1,0 +1,25 @@
+.input {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 18px;
+  background-color: #2b2b2b; /* אפור כהה */
+  border: 1px solid #444444; /* מסגרת עדינה */
+  color: #ffffff;
+  font-size: 1rem;
+  border-radius: 6px;
+  outline: none; /* ביטול המסגרת הכחולה המכוערת של הדפדפן */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  font-family: inherit;
+}
+
+/* עיצוב הטקסט השקוף שבתוך התיבה (Placeholder) */
+.input::placeholder {
+  color: #888888;
+}
+
+/* מצב בו המשתמש לחץ על התיבה ומתחיל לכתוב */
+.input:focus {
+  border-color: #e50914;
+  background-color: #1f1f1f;
+  box-shadow: 0 0 0 2px rgba(229, 9, 20, 0.25);
+}
