@@ -65,7 +65,7 @@
 
 **טופס הוספת סרט חדש:**
 
-![הוספת סרט](./screenshots/addMovie.png)
+![הוספת סרט](./screenshots/addMovieForm.png)
 
 **הוספת סרט ללא שם סרט:**
 
@@ -78,6 +78,10 @@
 **הוספת סרט עם URL לא תקין:**
 
 ![הוספת סרט](./screenshots/addMovie-wrongURL.png)
+
+**הוספת סרט עם כל הפרטים:**
+
+![הוספת סרט](./screenshots/addMovie.png)
 
 **הסרט נוסף לגלריה:**
 
